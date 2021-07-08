@@ -1,5 +1,5 @@
 {
-  "name": "@uniswap-v1-app/monorepo",
+  "name": "@mydex/monorepo",
   "version": "1.0.0",
   "keywords": [
     "ethereum",
@@ -10,28 +10,24 @@
   ],
   "private": true,
   "scripts": {
-    "react-app:build": "yarn workspace @uniswap-v1-app/react-app build --max-old-space-size=12288",
-    "react-app:eject": "yarn workspace @uniswap-v1-app/react-app eject",
-    "react-app:start": "yarn workspace @uniswap-v1-app/react-app start",
-    "react-app:test": "yarn workspace @uniswap-v1-app/react-app test",
+    "react-app:build": "yarn workspace @mydex/react-app build --max-old-space-size=12288",
+    "react-app:eject": "yarn workspace @mydex/react-app eject",
+    "react-app:start": "yarn workspace @mydex/react-app start",
+    "react-app:test": "yarn workspace @mydex/react-app test",
     "ship": "echo 'Sorry, this does not work yet'",
-    "build": "yarn workspace @uniswap-v1-app/react-app build --max-old-space-size=12288",
-    "chain": "cd hardhat && yarn hardhat node --network hardhat --no-deploy",
+    "build": "yarn workspace @mydex/react-app build --max-old-space-size=12288",
+    "chain": "yarn workspace @mydex/hardhat chain",
     "node": "cd hardhat && npx hardhat node",
     "test": "cd hardhat && npx hardhat test",
-    "start": "yarn workspace @uniswap-v1-app/react-app start",
+    "start": "yarn workspace @mydex/react-app start",
     "compile": "cd hardhat && npx hardhat compile",
-    "deploy": "cd hardhat && hardhat deploy --export-all ../react-app/src/contracts/hardhat_contracts.json",
+    "deploy": "yarn workspace @mydex/hardhat deploy",
+    "postdeploy": "cd hardhat && hardhat run scripts/publish.js",
     "watch": "cd hardhat && node scripts/watch.js",
     "accounts": "cd hardhat && npx hardhat accounts",
     "balance": "cd hardhat && npx hardhat balance",
     "send": "cd hardhat && npx hardhat send"
   },
-  "devDependencies": {
-  },
-  "workspaces": {
-    "packages": [
-      "*"
-    ]
-  }
+  "devDependencies": {},
+  "workspaces": [ "*" ]
 }
