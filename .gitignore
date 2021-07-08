@@ -6,23 +6,23 @@ yarn.lock
 cache
 artifacts
 
-packages/subgraph/subgraph.yaml
-packages/subgraph/generated
-packages/subgraph/abis/*
-packages/hardhat/*.txt
+subgraph/subgraph.yaml
+subgraph/generated
+subgraph/abis/*
+hardhat/*.txt
 **/aws.json
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 **/node_modules
-packages/hardhat/artifacts*
-packages/hardhat/deployments
-packages/react-app/src/contracts/*
-!packages/react-app/src/contracts/external_contracts.js
-packages/hardhat/cache*
+hardhat/artifacts*
+hardhat/deployments
+react-app/src/contracts/*
+!react-app/src/contracts/external_contracts.js
+hardhat/cache*
 
-packages/**/data
+**/data
 
-packages/subgraph/config/config.json
+subgraph/config/config.json
 tenderly.yaml
 
 # dependencies
