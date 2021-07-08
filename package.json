@@ -22,7 +22,6 @@
     "start": "yarn workspace @mydex/react-app start",
     "compile": "cd hardhat && npx hardhat compile",
     "deploy": "yarn workspace @mydex/hardhat deploy",
-    "postdeploy": "cd hardhat && hardhat run scripts/publish.js",
     "watch": "cd hardhat && node scripts/watch.js",
     "accounts": "cd hardhat && npx hardhat accounts",
     "balance": "cd hardhat && npx hardhat balance",

@@ -509,6 +509,7 @@ function App(props) {
           logoutOfWeb3Modal={logoutOfWeb3Modal}
           blockExplorer={blockExplorer}
         />
+        <TokenBalance name={"Balloons"} img={"🎈"} address={address} contracts={readContracts} />
         {faucetHint}
       </div>
 
